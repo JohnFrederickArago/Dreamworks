@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="movies.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      @media screen and (max-width: 540px) {
+        header {
+          gap: 90px;
+          padding-left: 0px;
+        }
+
+        @media screen and (max-width: 360px) {
+          header {
+            gap: 0px;
+            padding-left: 0px;
+          }
+        }
+      }
+    </style>
+
+    <!-- Title -->
+    <title>Shrek</title>
+  </head>
+  <body>
+    <!-- Body Container -->
+    <div class="body-container">
+      <!-- Header Section -->
+      <section class="one-movies">
+        <!-- Header -->
+        <div class="header-movies">
+          <header>
+            <!-- Logo -->
+            <a href="../main.html">
+              <img
+                class="logo"
+                src="../assets/dreamworks-animation-seeklogo.png"
+                alt="DreamWorks Logo"
+              />
+            </a>
+
+            <!-- Navigation Bar -->
+            <div class="navbar">
+              <ul>
+                <li>
+                  <a href="../main.html">Home</a>
+                </li>
+                <li>
+                  <a href="../main.html#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="../main.html#about">About</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons">
+              <a href="../index.html"
+                ><img src="../assets/user.png" alt="User"
+              /></a>
+              <img src="../assets/menu.png" alt="Menu" id="menu" />
+            </div>
+
+            <!-- Off Screen Menu -->
+            <div class="off-screen-menu">
+              <ul>
+                <li>
+                  <a href="../main.html">Home</a>
+                </li>
+                <li>
+                  <a href="../main.html#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="../main.html#about">About</a>
+                </li>
+              </ul>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <!-- Movie Section 1 -->
+      <section class="two-movies">
+        <!-- Movie Description -->
+        <div class="movie">
+          <!-- Contents -->
+          <div class="contents">
+            <!-- Paragraph Div-->
+            <div class="p">
+              <!-- Title -->
+              <img
+                src="../assets/MovieLogo/ShrekLogo.png"
+                alt="Shrek Logo"
+                class="title"
+              />
+              <!-- Info -->
+              <h4>
+                <span>2001</span><span><i>PG</i></span
+                ><span>1hr 29m</span><span>Adventure, Comedy</span>
+              </h4>
+              <p>
+                Shrek is an anti-social and highly territorial ogre who loves
+                the solitude of his swamp and enjoys fending off mobs and
+                intruders. His life is interrupted after the dwarfish Lord
+                Farquaad of Duloc exiles a vast number of fairy-tale creatures,
+                who inadvertently end up in the swamp. Angered by the intrusion,
+                Shrek decides to visit Farquaad and demand him to move the
+                creatures elsewhere. Shrek reluctantly allows a talkative
+                Donkey, whom he saved from Farquaad's guards before, to tag
+                along and guide him to Duloc.
+              </p>
+            </div>
+            <!-- Image -->
+            <img src="../assets/Bg/Shrekbg3.jpg" alt="Image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Section 2 -->
+      <section class="three-movies">
+        <div class="movie2">
+          <div class="contents2">
+            <img src="../assets/Bg/Shrekbg4.jpg" alt="Image" />
+            <div class="p2">
+              <p>
+                Shrek and Donkey travel to the castle and are attacked by the
+                Dragon. Shrek locates Fiona, who is appalled by his lack of
+                romanticism; they flee the castle after rescuing Donkey from the
+                dragon, who's revealed to be female and has fallen in love with
+                him. When Shrek removes his helmet and reveals he is an ogre,
+                Fiona stubbornly refuses to go to Duloc, demanding Farquaad
+                arrive in person to save her. Shrek carries Fiona against her
+                will. That night, after setting up camp, and with Fiona alone in
+                a cave, Shrek admits to Donkey that he is anti-social because he
+                grew frustrated after being constantly judged for his
+                appearance. Fiona overhears this and decides to be more kind to
+                Shrek. The next day, the three are harassed by Robin Hood and
+                his band of Merry Men, but Fiona easily defeats them in physical
+                combat. Shrek becomes impressed with Fiona, and they begin to
+                fall in love.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Section 3 -->
+      <section class="four-movies">
+        <div class="movie">
+          <div class="contents3">
+            <div class="p3">
+              <p>
+                Shrek interrupts the wedding just before the ceremony ends and
+                tells Fiona that Farquaad is only marrying her to become king.
+                The sun sets as Fiona transforms into an ogre in front of
+                everyone, causing Shrek to understand Fiona's previous remarks.
+                Outraged and disgusted, Farquaad orders Shrek executed and Fiona
+                re-imprisoned, so that he will still be king by technicality.
+                The two are saved when the Dragon, ridden by Donkey, breaks in
+                and devours Farquaad. Shrek and Fiona profess their love and
+                share a kiss. Fiona's curse is broken; she is surprised to find
+                she has remained an ogre, though Shrek reassures her that he
+                still finds her beautiful. They marry in the swamp with the
+                fairy-tale creatures in attendance, then leave for their
+                honeymoon.
+              </p>
+            </div>
+            <img src="../assets/Bg/Shrekbg5.jpg" alt="Image" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Internal Script -->
+    <script>
+      // Off Screen Menu
+      const hamMenu = document.getElementById("menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      // Toggle Off Screen Menu
+      hamMenu.addEventListener("click", () => {
+        offScreenMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
