@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      header {
+        padding: 20px 120px;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        margin-top: -100px;
+        background-color: none;
+      }
+
+      @media screen and (max-width: 540px) {
+        header {
+          gap: 80px;
+          padding-left: 70px;
+        }
+
+        @media screen and (max-width: 360px) {
+          header {
+            gap: 30px;
+            padding-left: 20px;
+          }
+        }
+      }
+    </style>
+
+    <!-- Title and Favicon -->
+    <title>Dreamworks Collection</title>
+    <link rel="icon" href="image/jpg" href="./assets/Favicon.jpg" />
+  </head>
+  <body>
+    <!-- Body Container -->
+    <div class="body-container">
+      <!-- Header and Footer Section -->
+      <section class="three" id="signup">
+        <!-- Header -->
+        <header>
+          <!-- Logo -->
+          <a href="./main.html#home">
+            <img
+              class="logo"
+              src="./assets/dreamworks-animation-seeklogo.png"
+              alt="DreamWorks Logo"
+            />
+          </a>
+
+          <!-- Navigation Bar -->
+          <div class="navbar">
+            <ul>
+              <li>
+                <a href="./main.html#home">Home</a>
+              </li>
+              <li>
+                <a href="./main.html#movie">Movies</a>
+              </li>
+              <li>
+                <a href="./main.html#about">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Icons -->
+          <div class="icons">
+            <a href="#about"><img src="./assets/user.png" alt="User" /></a>
+            <img src="./assets/menu.png" alt="Menu" id="menu" />
+          </div>
+
+          <!-- Off Screen Menu -->
+          <div class="off-screen-menu">
+            <ul>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#movie">Movies</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- Footer -->
+        <footer>
+          <!-- Sign In and Register Heading-->
+          <div class="heading">
+            <h3 class="SIn">Sign In</h3>
+            <h3>|</h3>
+            <h3 class="SOut">Register</h3>
+          </div>
+
+          <!-- Sign In -->
+          <div class="signin">
+            <div class="form">
+              <!-- Sign In Form -->
+              <form>
+                <!-- Input Fields -->
+                <label for="login-email">Email</label>
+                <input
+                  type="email"
+                  id="login-email"
+                  class="input-box"
+                  placeholder="Your Email"
+                  requireds
+                />
+                <br />
+                <label for="login-password">Password</label>
+                <input
+                  type="password"
+                  id="login-password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <!-- Sign In Button -->
+                <div type="submit" id="login-btn">Log In</div>
+              </form>
+              <!-- Error Message -->
+              <p
+                id="login-error"
+                style="
+                  color: red;
+                  display: none;
+                  margin-top: 20px;
+                  font-weight: 400;
+                "
+              >
+                Invalid email or password.
+              </p>
+            </div>
+          </div>
+
+          <!-- Register -->
+          <div class="register">
+            <div class="form">
+              <!-- Register Form -->
+              <form>
+                <!-- Input Fields -->
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  class="input-box"
+                  placeholder="First Name"
+                  required
+                />
+                <br />
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  class="input-box"
+                  placeholder="Last Name"
+                  required
+                />
+                <br />
+                <label for="signup-email">Email</label>
+                <input
+                  type="email"
+                  id="signup-email"
+                  class="input-box"
+                  placeholder="Your Email"
+                  required
+                />
+                <br />
+                <label for="signup-password">Password</label>
+                <input
+                  type="password"
+                  id="signup-password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <!-- Register Button -->
+                <div type="submit" id="signup-btn">Register</div>
+              </form>
+              <!-- Error Message -->
+              <p
+                id="signup-error"
+                style="
+                  color: red;
+                  display: none;
+                  font-weight: 400;
+                  margin-top: 20px;
+                "
+              >
+                Please fill in all fields.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer">
+            <!-- Copyright -->
+            <p>Copyright © 2025. All rights reserved.</p>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <!-- Main Script -->
+    <script src="./script.js"></script>
+
+    <!-- Sign Up and Login Internal Script -->
+    <script>
+      // Register Functionality
+      document
+        .getElementById("signup-btn")
+        .addEventListener("click", async () => {
+          // Get form data
+          const fname = document.getElementById("fname").value.trim();
+          const lname = document.getElementById("lname").value.trim();
+          const email = document.getElementById("signup-email").value.trim();
+          const password = document
+            .getElementById("signup-password")
+            .value.trim();
+          const error = document.getElementById("signup-error");
+
+          // Check if all fields are filled
+          if (fname && lname && email && password) {
+            try {
+              const response = await fetch("http://localhost:4000/api/user/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ fname, lname, email, password }),
+              });
+
+              // Handle response
+              const data = await response.json();
+
+              // Check if sign up was successful
+              if (response.ok) {
+                alert("Sign Up Successful! Redirecting to Login page...");
+                error.style.display = "none";
+                document.querySelector(".signin").style.display = "block";
+                document.querySelector(".register").style.display = "none";
+              } else {
+                // If sign up failed
+                error.textContent = data.message || "Sign Up Failed!";
+                error.style.display = "block";
+              }
+            } catch (err) {
+              // If an error occurs
+              error.textContent = "An error occurred. Please try again later.";
+              error.style.display = "block";
+            }
+          } else {
+            // If any field is empty
+            error.textContent = "All fields are required!";
+            error.style.display = "block";
+          }
+        });
+
+      // Login Functionality
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", async () => {
+          // Get form data
+          const email = document.getElementById("login-email").value.trim();
+          const password = document
+            .getElementById("login-password")
+            .value.trim();
+          const error = document.getElementById("login-error");
+
+          // Check if all fields are filled
+          if (email && password) {
+            try {
+              const response = await fetch(
+                "http://localhost:4000/api/user/login",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({ email, password }),
+                }
+              );
+
+              // Handle response
+              const data = await response.json();
+
+              // Check if login was successful
+              if (response.ok) {
+                alert(`Welcome back, ${data.user.name}!`);
+                error.style.display = "none";
+                localStorage.setItem("user", JSON.stringify(data));
+
+                // Redirect to another page
+                window.location.href = "./main.html#home";
+              } else {
+                // If login failed
+                error.textContent =
+                  data.message || "Invalid email or password.";
+                error.style.display = "block";
+              }
+            } catch (err) {
+              // If an error occurs
+              error.textContent = "An error occurred. Please try again later.";
+              error.style.display = "block";
+            }
+          } else {
+            // If any field is empty
+            error.textContent = "All fields are required!";
+            error.style.display = "block";
+          }
+        });
+
+      // Off Screen Menu
+      const hamMenu = document.getElementById("menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      // Toggle Off Screen Menu
+      hamMenu.addEventListener("click", () => {
+        offScreenMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
