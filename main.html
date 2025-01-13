@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Materialize CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      footer {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100vh;
+      }
+    </style>
+
+    <!-- Title and Favicon -->
+    <title>Dreamworks Collection</title>
+    <link rel="icon" href="image/jpg" href="./assets/Favicon.jpg" />
+  </head>
+
+  <body>
+    <!-- Body Container -->
+    <div class="body-container">
+      <!-- Header Section -->
+      <section class="one" id="home">
+        <div class="header">
+          <!-- Background Video -->
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="bg-video"
+            src="./assets/bg-video.mp4"
+          ></video>
+          <header>
+            <!-- Logo -->
+            <a href="#home">
+              <img
+                class="logo"
+                src="./assets/dreamworks-animation-seeklogo.png"
+                alt="DreamWorks Logo"
+              />
+            </a>
+            <!-- Navigation Bar -->
+            <div class="navbar">
+              <ul>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Icons -->
+            <div class="icons">
+              <a href="index.html"
+                ><img src="./assets/user.png" alt="User"
+              /></a>
+              <img src="./assets/menu.png" alt="Menu" id="menu" />
+            </div>
+            <!-- Off Screen Menu -->
+            <div class="off-screen-menu">
+              <ul>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+              </ul>
+            </div>
+          </header>
+
+          <!-- About Div -->
+          <div class="about">
+            <!-- Logo -->
+            <img
+              src="./assets/MovieLogo/DreamworksLogo.png"
+              alt="Dreamworks Logo 2"
+            />
+            <p>
+              We have introduced a lovable curmudgeonly ogre, an overly
+              optimistic pink-haired troll, a noodle-slurping martial arts
+              obsessed panda, a business minded baby and a bashful yet
+              charismatic Viking hero and his pet dragon, to name a few. Thanks
+              to movies like Shrek, Trolls, Kung Fu Panda, How to Train Your
+              Dragon, Madagascar, and The Boss Baby, and television series like
+              Gabby's Dollhouse, Jurassic World Camp Cretaceous, Trollhunters,
+              Spirit Riding Free, and All Hail King Julien, DreamWorks Animation
+              is recognized across the globe as a leader in quality family
+              entertainment.
+            </p>
+            <div>
+              <button>Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Section -->
+      <section class="two" id="movie">
+        <!-- Content Div -->
+        <div class="content Shrek active">
+          <img
+            src="./assets/MovieLogo/ShrekLogo.png"
+            alt="Shrek Logo"
+            class="title"
+          />
+          <h4>
+            <span>2001</span><span><i>PG</i></span
+            ><span>1hr 29m</span><span>Adventure, Comedy</span>
+          </h4>
+          <p>
+            Once upon a time, in a far away swamp, there lived an ogre named
+            Shrek whose precious solitude is suddenly shattered by an invasion
+            of annoying fairy tale characters. They were all banished from their
+            kingdom by the evil Lord Farquaad. Determined to save their home,
+            not to mention his, Shrek cuts a deal with Farquaad and sets out to
+            rescue Princess Fiona to be Farquaad's bride. Rescuing the Princess
+            may be small compared to her deep, dark secret.
+          </p>
+          <button><a href="./components/shrek.html">See More</a></button>
+        </div>
+        <div class="content KungFuPanda">
+          <img
+            src="./assets/MovieLogo/KungFuPandaLogo.png"
+            alt="Kung Fu Panda Logo"
+            class="title"
+          />
+          <h4>
+            <span>2008</span><span><i>PG</i></span
+            ><span>1hr 32m</span><span>Action, Adventure</span>
+          </h4>
+          <p>
+            Po might just be the laziest, clumsiest panda in the Valley of
+            Peace, but he secretly dreams of becoming a kung fu legend. When the
+            villainous snow leopard Tai Lung threatens Po's homeland, the
+            hapless panda is chosen to fulfil an ancient prophecy and defend the
+            Valley from attack. Training under Master Shifu, Po embarks on an
+            epic high-kicking adventure as he sets out to thwart Tai Lung's evil
+            plans. A DreamWorks animation.
+          </p>
+          <button><a href="./components/kungfupanda.html">See More</a></button>
+        </div>
+        <div class="content TheCroods">
+          <img
+            src="./assets/MovieLogo/TheCroodsLogo.png"
+            alt="The Croods Logo"
+            class="title"
+          />
+          <h4>
+            <span>2013</span><span><i>PG</i></span
+            ><span>1hr 38m</span><span>Family, Adventure</span>
+          </h4>
+          <p>
+            Prehistoric family the Croods live in a particularly dangerous
+            moment in time. Patriarch Grug (Nicolas Cage), his mate, Ugga
+            (Catherine Keener), teenage daughter Eep (Emma Stone), son Thunk
+            (Clark Duke) and feisty Gran (Cloris Leachman) gather food by day
+            and huddle together in a cave at night. When a more evolved caveman
+            named Guy (Ryan Reynolds) arrives on the scene, Grug is distrustful,
+            but it soon becomes apparent that Guy is correct about the impending
+            destruction of their world.
+          </p>
+          <button><a href="./components/croods.html">See More</a></button>
+        </div>
+        <div class="content HTTYD">
+          <img
+            src="./assets/MovieLogo/HTTYDLogo.png"
+            alt="How to Train Your Dragon Logo"
+            class="title"
+          />
+          <h4>
+            <span>2010</span><span><i>PG</i></span
+            ><span>1hr 38m</span><span>Drama, Adventure</span>
+          </h4>
+          <p>
+            Hiccup (Chris Sanders) is a Norse teenager from the island of Berk,
+            where fighting dragons is a way of life. His progressive views and
+            weird sense of humor make him a misfit, despite the fact that his
+            father (Dean DeBlois) is chief of the clan. Tossed into
+            dragon-fighting school, he endeavors to prove himself as a true
+            Viking, but when he befriends an injured dragon he names Toothless,
+            he has the chance to plot a new course for his people's future.
+          </p>
+          <button><a href="./components/httyd.html">See More</a></button>
+        </div>
+        <div class="content Madagascar">
+          <img
+            src="./assets/MovieLogo/MadagascarLogo.png"
+            alt="Madagascar Logo"
+            class="title"
+          />
+          <h4>
+            <span>2005</span><span><i>PG</i></span
+            ><span>1hr 26m</span><span>Adventure, Comedy</span>
+          </h4>
+          <p>
+            Alex the lion is the king of the urban jungle, the main attraction
+            at New York's Central Park Zoo. He and his best friends -- Marty the
+            zebra, Melman the giraffe and Gloria the hippo -- have spent their
+            whole lives in blissful captivity before an admiring public and with
+            regular meals provided for them. Not content to leave well enough
+            alone, Marty lets his curiosity get the better of him and makes his
+            escape -- with the help of some prodigious penguins -- to explore
+            the world.
+          </p>
+          <button><a href="./components/madagascar.html">See More</a></button>
+        </div>
+        <div class="content BossBaby">
+          <img
+            src="./assets/MovieLogo/BossBabyLogo.png"
+            alt="The Boss Baby Logo"
+            class="title"
+          />
+          <h4>
+            <span>2017</span><span><i>PG</i></span
+            ><span>1hr 37m</span><span>Spy, Comedy</span>
+          </h4>
+          <p>
+            The instant sibling rivalry must soon be put aside when Tim
+            discovers that Boss Baby is actually a spy on a secret mission, and
+            only he can help thwart a dastardly plot that involves an epic
+            battle between puppies and babies.
+          </p>
+          <button><a href="./components/bossbaby.html">See More</a></button>
+        </div>
+
+        <!-- Carousel Box-->
+        <div class="carousel-box">
+          <!-- Carousel -->
+          <div class="carousel">
+            <!-- Carousel Items-->
+            <div class="carousel-item" onClick="changeBg('Shrek.jpg', 'Shrek')">
+              <!-- Poster -->
+              <img
+                src="./assets/MoviePoster/ShrekPoster.png"
+                alt="Shrek Poster"
+              />
+            </div>
+            <div
+              class="carousel-item"
+              onClick="changeBg('KungFuPanda.jpg', 'KungFuPanda')"
+            >
+              <img
+                src="./assets/MoviePoster/KungFuPandaPoster.png"
+                alt="Kung Fu Panda Poster"
+              />
+            </div>
+            <div
+              class="carousel-item"
+              onClick="changeBg('TheCroods.jpg', 'TheCroods')"
+            >
+              <img
+                src="./assets/MoviePoster/TheCroodsPoster.png"
+                alt="The Croods Poster"
+              />
+            </div>
+            <div class="carousel-item" onClick="changeBg('HTTYD.jpg', 'HTTYD')">
+              <img
+                src="./assets/MoviePoster/HTTYDPoster.png"
+                alt="HTTYD Poster"
+              />
+            </div>
+            <div
+              class="carousel-item"
+              onClick="changeBg('Madagascar.jpg', 'Madagascar')"
+            >
+              <img
+                src="./assets/MoviePoster/MadagascarPoster.png"
+                alt="Madagascar Poster"
+              />
+            </div>
+            <div
+              class="carousel-item"
+              onClick="changeBg('BossBaby.jpg', 'BossBaby')"
+            >
+              <img
+                src="./assets/MoviePoster/TheBossBabyPoster.png"
+                alt="The Boss Baby Poster"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About and Footer Section -->
+      <section class="three" id="about">
+        <!-- Footer -->
+        <footer>
+          <!-- About Us Div -->
+          <div class="aboutus">
+            <h2>WELCOME TO DREAMWORKS</h2>
+            <p>
+              We're a legendary film studio that's been bringing magic to the
+              big screen for over two decades. Our mission is to create
+              unforgettable movies that inspire, entertain, and captivate
+              audiences of all ages.
+            </p>
+            <br />
+            <p>
+              We were founded in 1994 by three visionary leaders: Steven
+              Spielberg, Jeffrey Katzenberg, and David Geffen. Our founders
+              shared a passion for storytelling and a commitment to innovation,
+              which has driven our success ever since.
+            </p>
+            <h3>JOIN THE DREAMWORKS FAMILY</h3>
+            <p>
+              Whether you're a film enthusiast, a creative professional, or just
+              someone who loves great stories, we invite you to join the
+              DreamWorks family. Stay up-to-date with our latest news,
+              behind-the-scenes insights, and exclusive content by following us
+              on social media. Let's make some movie magic together!
+            </p>
+            <button><a href="./index.html">Register</a></button>
+          </div>
+
+          <!-- Footer Div -->
+          <div class="footer">
+            <!-- Copyright -->
+            <p>Copyright © 2025. All rights reserved.</p>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <!-- Main Script -->
+    <script src="./script.js"></script>
+
+    <!--JQuery CDN-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Materialize CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Internal Script -->
+    <script>
+      // Carousel
+      $(document).ready(function () {
+        $(".carousel").carousel();
+      });
+
+      // Off Screen Menu
+      const hamMenu = document.getElementById("menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      // Toggle Off Screen Menu
+      hamMenu.addEventListener("click", () => {
+        offScreenMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
