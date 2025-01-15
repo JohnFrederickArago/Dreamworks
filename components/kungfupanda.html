@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="movies.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Internal CSS -->
+    <style>
+      @media screen and (max-width: 1024px) {
+        .contents .p {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .contents .p p {
+          width: 600px;
+        }
+
+        .contents2 .p2 {
+          margin-top: 20px;
+        }
+
+        .contents2 .p2 p {
+          width: 600px;
+        }
+
+        .contents3 .p3 {
+          margin: 0;
+        }
+
+        .contents3 .p3 p {
+          width: 600px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .contents .p {
+          margin-top: 20px;
+        }
+
+        .contents .p p {
+          width: 400px;
+          margin-bottom: 20px;
+        }
+
+        .contents2 {
+          flex-direction: column-reverse;
+        }
+
+        .contents2 .p2 {
+          margin-bottom: 20px;
+        }
+
+        .contents2 .p2 p {
+          width: 400px;
+        }
+
+        .contents3 .p3 {
+          margin: 40px 0;
+        }
+
+        .contents3 .p3 p {
+          width: 400px;
+        }
+      }
+
+      @media screen and (max-width: 540px) {
+        .contents .p {
+          margin-top: 20px;
+        }
+
+        .contents .p p {
+          width: 300px;
+          margin: 0 auto;
+        }
+
+        .contents2 .p2 {
+          margin-top: 140px;
+        }
+
+        .contents2 .p2 p {
+          width: 300px;
+        }
+
+        .contents3 .p3 {
+          margin-top: 60px;
+          margin-bottom: 0;
+        }
+
+        .contents3 .p3 p {
+          width: 300px;
+        }
+      }
+
+      @media screen and (max-width: 360px) {
+        .contents .p .title {
+          width: 250px;
+          height: 100%;
+          margin: 0 auto;
+        }
+
+        .contents .p h4 {
+          margin-bottom: 20px;
+          width: 300px;
+          margin: 0 auto;
+        }
+
+        .contents .p {
+          margin-top: 20px;
+        }
+
+        .contents .p p {
+          width: 300px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+        }
+
+        .contents2 .p2 p {
+          width: 300px;
+          margin-bottom: 40px;
+        }
+
+        .contents3 .p3 p {
+          width: 300px;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+
+    <!-- Title -->
+    <title>Kung Fu Panda</title>
+  </head>
+
+  <body>
+    <!-- Body Container -->
+    <div class="body-container">
+      <!-- Header Section -->
+      <section class="one-movies-kungfu">
+        <!-- Header -->
+        <div class="header-movies">
+          <header>
+            <!-- Logo -->
+            <a href="../main.html">
+              <img
+                class="logo"
+                src="../assets/dreamworks-animation-seeklogo.png"
+                alt="DreamWorks Logo"
+              />
+            </a>
+
+            <!-- Navigation Bar -->
+            <div class="navbar">
+              <ul>
+                <li>
+                  <a href="../main.html">Home</a>
+                </li>
+                <li>
+                  <a href="../main.html#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="../main.html#about">About</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons">
+              <a href="../index.html"
+                ><img src="../assets/user.png" alt="User"
+              /></a>
+              <img src="../assets/menu.png" alt="Menu" id="menu" />
+            </div>
+
+            <!-- Off Screen Menu -->
+            <div class="off-screen-menu">
+              <ul>
+                <li>
+                  <a href="../main.html">Home</a>
+                </li>
+                <li>
+                  <a href="../main.html#movie">Movies</a>
+                </li>
+                <li>
+                  <a href="../main.html#about">About</a>
+                </li>
+              </ul>
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <!-- Movies Section 1 -->
+      <section class="two-movies">
+        <!-- Movie 1 -->
+        <div class="movie">
+          <!-- Contents -->
+          <div class="contents">
+            <!-- Paragraph Div -->
+            <div class="p">
+              <!-- Title -->
+              <img
+                src="../assets/MovieLogo/KungFuPandaLogo.png"
+                alt="Kung Fu Panda Logo"
+                class="title"
+              />
+              <!-- Info -->
+              <h4>
+                <span>2008</span><span><i>PG</i></span
+                ><span>1hr 32m</span><span>Action, Adventure</span>
+              </h4>
+              <p>
+                Shifu holds a tournament for the Five so that Oogway can
+                identify the Dragon Warrior, the prophesied hero worthy of
+                reading the Scroll, and Po arrives too late to enter the arena.
+                Desperate to see his idols, he accidentally launches himself
+                into the middle of the tournament off a chair propelled by
+                fireworks. Oogway proclaims Po the Dragon Warrior, much to Po's
+                and the Masters' shock.
+              </p>
+            </div>
+            <!-- Image -->
+            <img src="../assets/Bg/kungfuBg2.jpg" alt="Image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Section 2 -->
+      <section class="three-movies">
+        <div class="movie2">
+          <div class="contents2">
+            <img src="../assets/Bg/kungfuBg3.jpg" alt="Image" />
+            <div class="p2">
+              <p>
+                At Chorh-Gom Prison, Zeng's warnings are ridiculed before Tai
+                Lung uses one of Zeng's feathers to easily escape and subdue his
+                guards before sending Zeng back. Shifu informs Oogway, who makes
+                him promise to believe in Po as the Dragon Warrior, names him as
+                his successor as the Valley's leader, and ascends into the
+                Spirit Realm. Shifu then informs Po and the Five of Tai Lung's
+                escape and Oogway's passing, and tells Po he is the only one who
+                can stop him. Horrified by the bad news, Po runs away, but Shifu
+                stops him. When Shifu asks Po why he chose to stay, Po tells him
+                that he hated who he was, and he felt that despite Shifu's harsh
+                treatment, he still believed Shifu could change him. Po then
+                makes Shifu admit that he does not know how to train him to be
+                the Dragon Warrior. Tigress overhears this and leads the Five in
+                an attempt to stop Tai Lung.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Section 3 -->
+      <section class="four-movies">
+        <div class="movie">
+          <div class="contents3">
+            <div class="p3">
+              <p>
+                Meanwhile, Shifu discovers that Po is capable of impressive
+                physical feats when motivated by food, and successfully trains
+                Po by incorporating these feats into an innovative style of kung
+                fu. The Five fight Tai Lung, but he ultimately defeats them with
+                his nerve-strike technique, leaving only Crane, who carries the
+                rest back to the Valley as a warning. Shifu decides that Po is
+                ready to receive the Dragon Scroll, but when Po opens it, he
+                discovers that the Scroll is nothing but a blank reflective
+                surface. Believing the Scroll to have no power, Shifu has Po and
+                the Five evacuate the inhabitants of the Valley while he faces
+                Tai Lung alone to help everyone else escape. Trying to console a
+                distraught Po, Mr. Ping reveals that his "secret ingredient
+                soup" has no secret ingredient at all, explaining that things
+                can become special with belief. Realizing that this is the
+                message of the Dragon Scroll, Po rushes back to help Shifu.
+              </p>
+            </div>
+            <img src="../assets/Bg/kungfuBg4.jpg" alt="Image" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Internal Script -->
+    <script>
+      // Off Screen Menu
+      const hamMenu = document.getElementById("menu");
+      const offScreenMenu = document.querySelector(".off-screen-menu");
+
+      // Toggle Off Screen Menu
+      hamMenu.addEventListener("click", () => {
+        offScreenMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
